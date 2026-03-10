@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0891b2">
+  <title>Purchase Complete — Starter Templates Pro</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .download-card {
+      background: var(--color-card-bg, #1e293b);
+      border: 1px solid var(--color-border, #334155);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    .download-card h3 { margin: 0 0 0.5rem 0; color: var(--color-text, #f8fafc); }
+    .download-card p { margin: 0 0 1rem 0; color: var(--color-text-muted, #94a3b8); font-size: 0.875rem; }
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <main class="status-page">
+    <div class="status-card">
+      <span class="status-icon" aria-hidden="true">&#9989;</span>
+      <h1>Thank You!</h1>
+      <p>Your purchase is complete. Your product files are ready to download.</p>
+
+      <div id="download-section"></div>
+
+      <div class="next-steps">
+        <h2>Getting Started</h2>
+        <ol>
+          <li><strong>Download the files</strong> — Click the download button above.</li>
+          <li><strong>Extract the archive</strong> — Unzip the downloaded package.</li>
+          <li><strong>Read the README</strong> — Each product includes detailed setup instructions.</li>
+          <li><strong>Check manifest.json</strong> — Verify file integrity with included checksums.</li>
+        </ol>
+      </div>
+
+      <div class="status-actions" style="margin-top: 2rem;">
+        <a href="index.html" class="btn btn-secondary">Back to Store</a>
+        <a href="mailto:megafolder122122@hotmail.com" class="btn btn-secondary">Contact Support</a>
+      </div>
+
+      <p style="margin-top: 2rem; font-size: 0.875rem; color: var(--color-text-muted);">
+        A receipt has been sent to your email. Questions? <a href="mailto:megafolder122122@hotmail.com">megafolder122122@hotmail.com</a>
+      </p>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      var BASE = 'https://github.com/inity13/starter-templates-pro/releases/download/v1.0.0/';
+      var products = {
+        'portfolio-template': { name: 'Portfolio Template', file: 'portfolio-template.zip', desc: 'Professional portfolio website template with responsive design, dark mode, and s...' },
+        'landing-page-template': { name: 'Landing Page Template', file: 'landing-page-template.zip', desc: 'High-converting landing page template with hero section, testimonials, and CTA o...' },
+        'business-template': { name: 'Business Template', file: 'business-template.zip', desc: 'Corporate business website template with services, team, and contact sections....' },
+        'restaurant-template': { name: 'Restaurant Template', file: 'restaurant-template.zip', desc: 'Restaurant & food service template with menu showcase, reservations, and gallery...' },
+        'coming-soon-template': { name: 'Coming Soon Template', file: 'coming-soon-template.zip', desc: 'Pre-launch coming soon page with countdown timer, email signup, and social links...' },
+        'blog-template': { name: 'Blog Template', file: 'blog-template.zip', desc: 'Modern blog template with dark mode, categories, search, and responsive layout....' },
+        'ecommerce-template': { name: 'E-Commerce Template', file: 'ecommerce-template.zip', desc: 'E-commerce product showcase template with cart UI, product grid, and checkout fl...' },
+        'photography-template': { name: 'Photography Template', file: 'photography-template.zip', desc: 'Photography portfolio template with lightbox gallery, lazy loading, and fullscre...' },
+        'agency-template': { name: 'Agency Template', file: 'agency-template.zip', desc: 'Creative agency template with portfolio showcase, case studies, and team section...' },
+        'event-template': { name: 'Event Template', file: 'event-template.zip', desc: 'Event & conference template with schedule, speakers, venue info, and ticket inte...' },
+        'web-templates-complete-bundle': { name: 'Starter Templates Bundle', file: 'web-templates-complete-bundle.zip', desc: 'All 10 premium website templates. Pure HTML/CSS/JS, no dependencies....' }
+      };
+
+      var params = new URLSearchParams(window.location.search);
+      var productSlug = params.get('product');
+      var section = document.getElementById('download-section');
+
+      if (productSlug && products[productSlug]) {
+        var p = products[productSlug];
+        section.innerHTML = '<div class="download-card">' +
+          '<h3>' + p.name + '</h3>' +
+          '<p>' + p.desc + '</p>' +
+          '<a href="' + BASE + p.file + '" class="btn btn-primary btn-lg" download>Download ' + p.file + '</a>' +
+          '</div>';
+      } else {
+        section.innerHTML = '<div class="download-card">' +
+          '<h3>Download Your Product</h3>' +
+          '<p>Check your email for the download link, or contact support.</p>' +
+          '</div>';
+      }
+    })();
+  </script>
+<!-- analytics-start -->
+<script>
+(function(){
+  try{
+    fetch("https://ferovwapilhcpqozqinn.supabase.co/rest/v1/page_views",{
+      method:"POST",
+      headers:{"Content-Type":"application/json","apikey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZlcm92d2FwaWxoY3Bxb3pxaW5uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwMTU3NTYsImV4cCI6MjA4ODU5MTc1Nn0.RhBBxPaAw5Fyzal5m3GY_sdxiIAp_RVJ_ki8CUgPnRY","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZlcm92d2FwaWxoY3Bxb3pxaW5uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwMTU3NTYsImV4cCI6MjA4ODU5MTc1Nn0.RhBBxPaAw5Fyzal5m3GY_sdxiIAp_RVJ_ki8CUgPnRY","Prefer":"return=minimal"},
+      body:JSON.stringify({store_name:"Starter Templates Pro",page_path:location.pathname,referrer:document.referrer||null,user_agent:navigator.userAgent}),
+      keepalive:true
+    }).catch(function(){});
+  }catch(e){}
+})();
+</script>
+<!-- analytics-end -->
+</body>
+</html>
